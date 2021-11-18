@@ -12,8 +12,6 @@ tkn = tokens.mxm_api_token
 tkn_app = tokens.mxm_app_token
 tkn_aws = tokens.mxm_AWSELB
 
-genius_client_id = tokens.genius_client_id
-genius_client_secret = tokens.genius_client_secret
 genius_client_token = tokens.genius_client_token
 
 lyrics_regex = re.compile(r'(?:<span class="lyrics__content__)(?:ok|warning|error)(?:">)(.*?)(?:</span>)',flags=re.DOTALL)
@@ -213,8 +211,6 @@ async def genius_search(name,author,track_len,lyrics_ref):
     err = False
     lyrics = None
     track_len = int(track_len)
-    client_id = genius_client_id
-    client_secret = genius_client_secret
     client_token = genius_client_token
     track_path = None
     async with aiohttp.ClientSession() as session:
