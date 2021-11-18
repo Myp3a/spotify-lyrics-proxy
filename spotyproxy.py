@@ -170,6 +170,46 @@ async def recommendations_in_free_tier_playlist(req):
     data = await get_handler(req)
     return data
 
+@routes.get('/podcast-ap4p/ctaCardsEligibility')
+async def podcast_eligibility(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/partner-client-integrations/v1/categories/voice-assistants')
+async def voice_assistants(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/premium-notification/v1/GetPremiumMessage')
+async def get_premium_message(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/carthing-proxy/device/v1/mydevices')
+async def my_devices(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/vanilla/v1/views/hub2/nft/shows-episode-recommendations')
+async def shows_episode_recommendations(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/podcast-ap4p/sponsoredSection/{duck}')
+async def podcast_sponsored(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/vanilla/v1/views/hub2/nft/episode-featured-content')
+async def episode_featured_content(req):
+    data = await get_handler(req)
+    return data
+
+@routes.get('/newepisodenotifications/v1/optin')
+async def notifications_optin(req):
+    data = await get_handler(req)
+    return data
+
 @routes.get('/annotations/v1/genius/enabled-tracks-and-resources')
 async def genius_enabled_tracks_and_resources(req):
     data = await get_handler(req,genius=True)
@@ -233,6 +273,11 @@ async def extendp(req):
 
 @routes.post('/blend-invitation/v1/generate')
 async def blend_gen(req):
+    data = await post_handler(req)
+    return data
+
+@routes.post('/content-feed-service/v1/feed')
+async def content_feed_feed(req):
     data = await post_handler(req)
     return data
 
